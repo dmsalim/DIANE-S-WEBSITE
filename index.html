@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Header Bottom-Centered Title</title>
+  <style>
+  * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  }
+    @media{
+      body {
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+        background-color: white; /* page background color */
+        display: block;      /* removes inline spacing */
+
+      }
+    }
+
+    /* Make header taller on large screens */
+    @media{
+      header {
+        position:relative;
+        width: 100vw;
+        height: 11vw; /* adjust as needed */
+        object-fit: cover;   /* key fix */
+        display: block;      /* removes inline spacing */
+        opacity: 90%;
+      }
+      header::before {
+        content: "";
+        position: absolute;     /* must be absolute */
+        inset: 0;               /* shorthand for top:0 left:0 right:0 bottom:0 */
+        background-image: url("MW_header.jpeg");
+        background-size: cover;
+        background-position: center;
+        filter: sepia(45%) saturate(85%) contrast(90%) brightness(100%);
+        z-index: -1;
+      }
+      header h1 {
+        position: absolute;          /* absolute positioning inside header */
+        bottom: -1.1vw;                   /* stick to bottom */
+        left: 45vw;                   /* start at horizontal center */
+        transform: translateX(-50%); /* center horizontally */
+        width: 70%;                  /* span 70% of header width */
+        margin: 0;
+        padding: 0;
+        font-size: 6vw;             /* adjust font size */
+        color: white;
+        text-align: center;           /* text centered within h1 box */
+        line-height: 1.1;
+        box-sizing: border-box;       /* ensures padding doesn’t expand width */
+        word-wrap: break-word;        /* wrap text if too long */
+      }
+      header h2 {
+        position: absolute;          /* absolute positioning inside header */
+        bottom: -3.8vw;                   /* stick to bottom */
+        left: 24.6vw;                   /* start at horizontal center */
+        font-size: 3vw;             /* adjust font size */
+        color: #9370DC; /* PURPLE */
+        margin: 0;
+        padding: 0;
+        white-space: nowrap;   /* prevents line breaks */
+      }
+      header h3 {
+        position: absolute;          /* absolute positioning inside header */
+        bottom: -7.4vw;                   /* stick to bottom */
+        left: 24.6vw;                   /* start at horizontal center */
+        font-size: 3vw;             /* adjust font size */
+        color: #929292; /* GRAY */
+        margin: 0;
+        padding: 0;
+        white-space: nowrap;   /* prevents line breaks */
+      }
+        /* Headshot image */
+      .headshot {
+        position: absolute;
+        top: 2.34vw;               /* distance from top */
+        left: 78.5vw;
+        width: 10.5vw;            /* adjust size */
+        margin: 0;
+        padding: 0;
+      }
+      .logo {
+        position: absolute;
+        top: 11.7vw;               /* distance from top */
+        left: 10.9vw;
+        width: 13.5vw;            /* adjust size */
+        margin: 0;
+        padding: 0px;
+      }
+    @media{ /* Box for main content */
+      .content-box {
+        position: relative;
+        z-index: 1;
+        width: 78vw;
+        height: 30vh;
+        min-height: 30vw;
+        margin: 8.3vw auto;
+        padding: 5vw;
+        border: 0.4vw solid #9370DC;
+        background-color: #ffffff; /* keep the box background white */
+        box-sizing: border-box;
+        overflow: hidden;          /* ensures pseudo-element doesn't overflow */
+      }
+
+      /* Background image with 80% opacity */
+      .content-box::before {
+        content: "";
+        position: absolute;
+        inset: 0; /* shorthand for top:0; right:0; bottom:0; left:0; */
+        background-image: url("GALAXY_FACE_EDITTED_TRANSPARENT_CROPPED1.png");
+        background-size: 41vw;
+        background-repeat: no-repeat;
+        background-origin: border-box
+        background-position: center;
+        opacity: 0.8;   /* 80% opacity */
+        z-index: -1;     /* behind the content */
+      }
+      /* right-aligned button container */
+      .content-nav {
+        position: relative;
+        top: -5vw;               /* distance from top */
+        left: -5vw;
+        display: flex;
+        flex-direction: column;   /* stack vertically */
+        align-items: flex-start;   /* keep them on the right */
+        gap: 0.9vw;
+        margin-bottom:0vw;
+        padding: 1vw;
+      }
+      /* button style */
+      .content-nav a {
+        text-decoration: none;
+        background-color: rgba(147, 112, 220, 0.5);
+        display: flex;
+        width: 17vw;
+        height: 3vw;
+        font-size: 1.5vw;
+        color: #DFDFDF;
+        border: 0.25vw solid #CCCCCC;
+        align: center;
+        justify-content: center;
+        align-items: center;
+        border-radius: 0.2vw;
+        transition: 0.2s
+        padding:0.5vw;
+      }
+      .content-nav a:hover {
+        background-color: #9370DC;
+        color: #DFDFDF;
+      }
+      .content-text {
+        position: relative;
+        width: 56.6vw;
+        top: -16.8vw;                 /* adjust as needed */
+        left: 14.5vw;                 /* adjust as needed */
+        border: 0.25vw solid #CCCCCC;
+        border-radius: 0.2vw;
+        background-color: rgba(146,146,146,0.75); /* 80% opacity */
+        padding: 1vw;
+        display: flex;
+        flex-direction: column;        /* stack children vertically */
+        align-items: flex-end;         /* right-align content horizontally */
+        justify-content: center;       /* vertically center content */
+      }
+
+      .content-text p {
+        font-size: 1.5vw;
+        color: #DFDFDF;
+        margin: 0;
+        justify-content: flex-start;
+        text-align: right;            /* ensures multi-line text is right-aligned */
+      }
+      /* right-aligned button container */
+      .research-nav {
+        position: relative;       /* controls whole row */
+        top: -18vw;
+        left: 20.2vw;
+        display: flex;
+        justify-content: center;  /* center horizontally */
+        gap: 1vw;
+        margin-top: 2vw;
+      }
+      /* Individual buttons */
+      .research-nav a {
+        position: relative;           /* required for pseudo-element positioning */
+        display: flex;
+        width: 10.9vw;
+        height: 16.8vh;
+        min-height: 16.8vw;
+        max-height: 28vw;
+        border: 0.25vw solid #CCCCCC;
+        border-radius: 0.3vw;
+        align-items: flex-start;
+        justify-content: center;
+        text-align: center;
+        text-decoration: none;
+        color: #929292 ;              /* text color */
+        font-size: 1.3vw;
+        font-weight: bold;            /* bold text */
+        -webkit-text-stroke: 0.05vw #DFDFDF; /* outline */
+        padding: 0.5vw;
+        box-sizing: border-box;
+        overflow: hidden;             /* clip pseudo-element */
+      }
+
+      /* Background image with opacity */
+      .research-nav a::before {
+        content: "";
+        position: absolute;
+        inset: 0;                     /* fill entire button */
+        background-size: cover;
+        background-position: center;
+        opacity: 0.5;                 /* only background opacity */
+        z-index: -1;                  /* behind text */
+      }
+
+      /* Assign images to each button */
+      .research-nav1::before { background-image: url("HCG96_EDITTED.png"); }
+      .research-nav2::before { background-image: url("M12B_EDITTED.png"); }
+      .research-nav3::before { background-image: url("DEDALUS_RA9_TRANSPARENT.png"); }
+
+      /* Hover effect */
+      .research-nav a:hover::before {
+        opacity: 1;               /* make background fully opaque */
+      }
+      .research-nav a:hover {
+        transform: scale(1.01);
+      }
+   }
+
+/* gives #9370DC */
+    } /* closes media query */
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>DIANE MALINDA SALIM</h1>
+  <h2>Astrophysicist at Rutgers University</h2>
+  <h3>NASA FINESST & Senior Quad Fellow</h3>
+</header>
+
+<!-- Headshot -->
+<img src="headshot_transparent_full.png" alt="My Headshot" class="headshot">
+<img src="LOGO_RUTGERS_NASA_GRAY.png" class="logo">
+
+<!-- Main content container -->
+<div class="content-box">
+  <div class="content-nav">
+    <a href="index.html">  HOME  </a>
+    <a href="DianeSalim_CV_2page.pdf" target="_blank">  CURRICULUM VITAE  </a>
+    <a href="mailto:dms653@physics.rutgers.edu?subject=Contacting%20Via%20Website&body=Hello%20Diane,"> CONTACT </a>
+  </div>
+  <div class="content-text">
+    <p>Diane is a PhD candidate conducting research in astrophysics at Rutgers University, where she studies turbulence, galaxy evolution and star formation in the interstellar medium through theoretical analysis, numerical simulations and the application of novel machine learning techniques. </p>
+  </div>
+  <div class="research-nav">
+    <a href="https://iopscience.iop.org/article/10.3847/1538-4357/ab77ae" class="research-nav1">TURBULENT STAR FORMATION</a>
+    <a href="https://iopscience.iop.org/article/10.3847/1538-4357/ad1c55" class="research-nav3">SUPER-RESOLUTION OF RAYLEIGH BÉNARD CONVECTION</a>
+    <a href="https://iopscience.iop.org/article/10.3847/1538-4357/ae13ac" class="research-nav2">SYMBOLIC REGRESSION IN THE INTERSTELLAR MEDIUM</a>
+  </div>
+</div>
+
+</body>
+</html>
