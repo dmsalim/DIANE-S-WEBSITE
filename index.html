@@ -37,7 +37,7 @@
         background-image: url("MW_header.jpeg");
         background-size: cover;
         background-position: center;
-        filter: sepia(45%) saturate(85%) contrast(90%) brightness(100%);
+        filter: sepia(70%) saturate(140%) hue-rotate(-30deg) contrast(95%) brightness(85%);
         z-index: -1;
       }
       header h1 {
@@ -99,6 +99,7 @@
         width: 78vw;
         height: 30vh;
         min-height: 30vw;
+        max-height: 47vw;
         margin: 8.3vw auto;
         padding: 5vw;
         border: 0.4vw solid #9370DC;
@@ -117,14 +118,15 @@
         background-repeat: no-repeat;
         background-origin: border-box
         background-position: center;
-        opacity: 0.8;   /* 80% opacity */
+        opacity: 0.85;   /* 80% opacity */
+        filter: sepia(40%) saturate(140%) contrast(95%) brightness(85%);
         z-index: -1;     /* behind the content */
       }
       /* right-aligned button container */
       .content-nav {
         position: relative;
         top: -5vw;               /* distance from top */
-        left: -5vw;
+        left: -4.8vw;
         display: flex;
         flex-direction: column;   /* stack vertically */
         align-items: flex-start;   /* keep them on the right */
@@ -192,7 +194,7 @@
         width: 10.9vw;
         height: 16.8vh;
         min-height: 16.8vw;
-        max-height: 28vw;
+        max-height: 30vw;
         border: 0.25vw solid #CCCCCC;
         border-radius: 0.3vw;
         align-items: flex-start;
@@ -215,7 +217,7 @@
         inset: 0;                     /* fill entire button */
         background-size: cover;
         background-position: center;
-        opacity: 0.5;                 /* only background opacity */
+        opacity: 0.6;                 /* only background opacity */
         z-index: -1;                  /* behind text */
       }
 
@@ -257,12 +259,12 @@
     <a href="mailto:dms653@physics.rutgers.edu?subject=Contacting%20Via%20Website&body=Hello%20Diane,"> CONTACT </a>
   </div>
   <div class="content-text">
-    <p>Diane is a PhD candidate conducting research in astrophysics at Rutgers University, where she studies turbulence, galaxy evolution and star formation in the interstellar medium through theoretical analysis, numerical simulations and the application of novel machine learning techniques. </p>
+    <p>Diane is a Doctor of Philosophy candidate conducting research in astrophysics at Rutgers University, where she studies turbulence, galaxy evolution and star formation in the interstellar medium through theoretical analysis, numerical simulations and the application of novel machine learning techniques. </p>
   </div>
   <div class="research-nav">
-    <a href="https://iopscience.iop.org/article/10.3847/1538-4357/ab77ae" class="research-nav1">TURBULENT STAR FORMATION</a>
-    <a href="https://iopscience.iop.org/article/10.3847/1538-4357/ad1c55" class="research-nav3">SUPER-RESOLUTION OF RAYLEIGH BÉNARD CONVECTION</a>
-    <a href="https://iopscience.iop.org/article/10.3847/1538-4357/ae13ac" class="research-nav2">SYMBOLIC REGRESSION IN THE INTERSTELLAR MEDIUM</a>
+    <a href="https://iopscience.iop.org/article/10.3847/1538-4357/ab77ae" target="_blank" class="research-nav1">TURBULENCE-REGULATED STAR FORMATION</a>
+    <a href="https://iopscience.iop.org/article/10.3847/1538-4357/ad1c55" target="_blank" class="research-nav3">SUPER-RESOLUTION OF RAYLEIGH BÉNARD CONVECTION</a>
+    <a href="https://iopscience.iop.org/article/10.3847/1538-4357/ae13ac" target="_blank" class="research-nav2">SYMBOLIC REGRESSION IN THE INTERSTELLAR MEDIUM</a>
   </div>
 </div>
 
